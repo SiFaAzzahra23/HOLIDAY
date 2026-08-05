@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Elms Sans", sans-serif;
+    background: linear-gradient(135deg, #e8f5e9 0%, #e0f2fe 50%, #fffbeb 100%);
+    background-attachment: fixed;
+    color: #2c3e50;
+    margin: 0;
+    padding: 0;
+}
+
+/* Elemen Dekorasi Bergerak di Background */
+.background-decor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+    user-select: none;
+}
+
+.cloud {
+    position: absolute;
+    font-size: 70px;
+    opacity: 0.35;
+    /* Dibuat lebih jelas */
+}
+
+.cloud1 {
+    top: 12%;
+    animation: floatCloud 35s linear infinite;
+}
+
+.cloud2 {
+    top: 35%;
+    animation: floatCloud 50s linear infinite;
+    animation-delay: -15s;
+    font-size: 90px;
+    opacity: 0.25;
+}
+
+.cloud3 {
+    top: 65%;
+    animation: floatCloud 45s linear infinite;
+    animation-delay: -25s;
+    font-size: 55px;
+    opacity: 0.3;
+}
+
+.cloud4 {
+    top: 80%;
+    animation: floatCloud 60s linear infinite;
+    animation-delay: -10s;
+    font-size: 80px;
+    opacity: 0.25;
+}
+
+.bird {
+    position: absolute;
+    font-size: 24px;
+    opacity: 0.45;
+}
+
+.bird1 {
+    top: 22%;
+    animation: flyBird 18s linear infinite;
+}
+
+.bird2 {
+    top: 27%;
+    animation: flyBird 22s linear infinite;
+    animation-delay: -7s;
+}
+
+@keyframes floatCloud {
+    0% {
+        left: -120px;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes flyBird {
+    0% {
+        left: -50px;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.logo-bubble {
+    color: white;
+    background: linear-gradient(135deg, #478263 0%, #3a6b51 100%);
+    padding: 15px 35px;
+    border-radius: 30px 30px 30px 4px;
+    position: relative;
+    display: inline-block;
+    box-shadow: 0 8px 25px rgba(71, 130, 99, 0.25);
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0;
+    text-align: center;
+    transform: rotate(-3deg);
+    /* Efek stiker liburan dinamis */
+}
+
+/* Ekor bubble chat unik di sudut samping */
+.logo-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 25px;
+    border-width: 15px 15px 0 0;
+    border-style: solid;
+    border-color: #3a6b51 transparent;
+    display: block;
+    width: 0;
+}
+
+/* Stiker Hiasan Liburan */
+.decor-sticker {
+    font-size: 42px;
+    user-select: none;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+    display: inline-block;
+    align-self: center;
+    transition: transform 0.3s ease;
+}
+
+.sticker-left {
+    animation: floatLeft 3s ease-in-out infinite alternate;
+    margin-right: 15px;
+}
+
+.sticker-right {
+    animation: floatRight 3.5s ease-in-out infinite alternate;
+    margin-left: 15px;
+}
+
+.decor-sticker:hover {
+    transform: scale(1.3) rotate(15deg);
+    cursor: pointer;
+}
+
+@keyframes floatLeft {
+    0% {
+        transform: translateY(0) rotate(-12deg);
+    }
+
+    100% {
+        transform: translateY(-8px) rotate(-5deg);
+    }
+}
+
+@keyframes floatRight {
+    0% {
+        transform: translateY(0) rotate(15deg);
+    }
+
+    100% {
+        transform: translateY(-10px) rotate(8deg);
+    }
+}
+
+h3 {
+    color: #2c3e50;
+    /* Biru Dongker */
+}
+
+.grid-pengenalan {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Membagi jadi 2 kolom sama besar (1 fraction) */
+    gap: 30px;
+    /* Jarak antar kolom */
+    align-items: center;
+    /* Teks di tengah secara vertikal */
+    max-width: 900px;
+    margin: 0 auto;
+    /* Supaya area ini berada di tengah layar */
+    padding: 20px;
+}
+
+.liburan-highlight {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0 0 10px 0;
+    display: inline-block;
+    color: #478263;
+    /* Hijau soft */
+}
+
+.kolom-foto img {
+    border-radius: 12px;
+    /* Membuat sudut gambar membulat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Memberi efek bayangan */
+}
+
+table {
+    width: 900px;
+    margin: 20px auto;
+    /* Ketengah */
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e1eee6;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #e1eee6;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+th {
+    background-color: #478263;
+    color: white;
+    border: none;
+}
+
+/* Membuat efek warna belang-belang pada baris tabel */
+tr:nth-child(even) {
+    background-color: #eef7f2;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto 50px auto;
+    /* Ketengah */
+    background: #eef7f2;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #c2e2d0;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* Agar kotak tidak melewati batas saat diberi padding */
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #478263;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* Mengubah kursor jadi tangan saat ditunjuk */
+}
+
+input[type="submit"]:hover {
+    background-color: #36644c;
+    /* Warna menggelap saat disorot mouse */
+}
+
+/* Modal Ticket Style */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.ticket-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    position: relative;
+    border-top: 8px solid #478263;
+}
+
+.ticket-card h2 {
+    margin-top: 0;
+    color: #478263;
+}
+
+.ticket-details {
+    text-align: left;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px dashed #ccc;
+}
+
+.ticket-details p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.qr-container {
+    margin: 20px 0;
+}
+
+.qr-container img {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+}
+
+.btn-close {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+.btn-close:hover {
+    background-color: #1a252f;
+}

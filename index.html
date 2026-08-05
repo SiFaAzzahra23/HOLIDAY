@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaskeun</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-decor">
+        <div class="cloud cloud1">☁️</div>
+        <div class="cloud cloud2">☁️</div>
+        <div class="cloud cloud3">☁️</div>
+        <div class="cloud cloud4">☁️</div>
+        <div class="bird bird1">🕊️</div>
+        <div class="bird bird2">🕊️</div>
+    </div>
+
+    <div class="logo-container">
+        <span class="decor-sticker sticker-left">🌴</span>
+        <h1 class="logo-bubble">Gaskeun 🚌💨</h1>
+        <span class="decor-sticker sticker-right">☀️</span>
+    </div>
+    <div class="grid-pengenalan">
+        <div class="kolom-foto">
+            <img src="biss.jpeg" alt="Foto BIS" width="100%">
+        </div>
+        <div class="kolom-teks">
+            <h4 class="liburan-highlight">Halo Bestt, Waktunya Liburan Niee</h4>
+            <h3>Pemesanan Tiket Bis Online Terpercaya</h3>
+            <p>
+                Selamat datang di <b>Gaskeun</b>. Kami menyediakan perjalanan yang
+                <i>Aman, Nyaman, dan Tepat Waktu</i>.
+                <u>Kepuasan penumpang adalah prioritas kami.</u>
+            </p>
+        </div>
+    </div>
+    <h3>Fasilitas Bis Kami</h3>
+    <table>
+        <tr>
+            <th style="width: 250px;">Kategori Fasilitas</th>
+            <th>Detail & Layanan</th>
+        </tr>
+        <tr>
+            <td><strong>Kenyamanan Kabin</strong></td>
+            <td>Full AC & Sistem Musik Hiburan</td>
+        </tr>
+        <tr>
+            <td><strong>Kursi Penumpang</strong></td>
+            <td>Kursi Reclining (Bisa Rebah) yang Nyaman</td>
+        </tr>
+        <tr>
+            <td><strong>Makan & Makanan Ringan</strong></td>
+            <td>Makan Siang, Roti Manis, Buah-buahan, Mie Instan, dan Permen</td>
+        </tr>
+        <tr>
+            <td><strong>Minuman Gratis</strong></td>
+            <td>Air Mineral Botol, Kopi Hangat, dan Teh</td>
+        </tr>
+    </table>
+    <h3>Jadwal Keberangkatan</h3>
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Rute Tujuan</th>
+            <th>Jam Keberangkatan</th>
+            <th>Harga Tiket</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Solo - Jakarta</td>
+            <td>15:00 WIB</td>
+            <td>Rp 480.000</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Solo - Surabaya</td>
+            <td>10:00 WIB</td>
+            <td>Rp 320.000</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Solo - Bandung</td>
+            <td>08:00 WIB</td>
+            <td>Rp 390.000</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Solo - Yogyakarta</td>
+            <td>09:00 WIB</td>
+            <td>Rp 120.000</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Solo - Semarang</td>
+            <td>11:00 WIB</td>
+            <td>Rp 180.000</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Solo - Malang</td>
+            <td>16:00 WIB</td>
+            <td>Rp 250.000</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Solo - Denpasar</td>
+            <td>12:00 WIB</td>
+            <td>Rp 600.000</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Solo - Pontianak</td>
+            <td>13:00 WIB</td>
+            <td>Rp 580.000</td>
+        </tr>
+        <tr>
+            <td colspan="4">Jadwal dapat berubah sewaktu-waktu</td>
+        </tr>
+    </table>
+    <h3>Formulir Pemesanan Tiket</h3>
+    <form>
+        <label for="nama">Nama Lengkap Penumpang:</label><br>
+        <input type="text" id="nama" name="nama" required><br><br>
+
+        <label for="rute">Rute Tujuan:</label><br>
+        <select id="rute" name="rute">
+            <option value="480000" data-route="Solo - Jakarta">Solo - Jakarta (Rp 480.000)</option>
+            <option value="320000" data-route="Solo - Surabaya">Solo - Surabaya (Rp 320.000)</option>
+            <option value="390000" data-route="Solo - Bandung">Solo - Bandung (Rp 390.000)</option>
+            <option value="120000" data-route="Solo - Yogyakarta">Solo - Yogyakarta (Rp 120.000)</option>
+            <option value="180000" data-route="Solo - Semarang">Solo - Semarang (Rp 180.000)</option>
+            <option value="250000" data-route="Solo - Malang">Solo - Malang (Rp 250.000)</option>
+            <option value="600000" data-route="Solo - Denpasar">Solo - Denpasar (Rp 600.000)</option>
+            <option value="580000" data-route="Solo - Pontianak">Solo - Pontianak (Rp 580.000)</option>
+        </select><br><br>
+
+        <label for="jumlah">Jumlah Tiket:</label><br>
+        <input type="number" id="jumlah" name="jumlah" min="1" value="1" required><br><br>
+
+        <label for="pembayaran">Metode Pembayaran:</label><br>
+        <select id="pembayaran" name="pembayaran">
+            <option value="Transfer Bank">Transfer Bank</option>
+            <option value="E-Wallet">E-Wallet</option>
+            <option value="Cash">Cash</option>
+        </select><br><br>
+
+        <div id="liveTotalContainer" style="margin-bottom: 20px; font-weight: bold; color: #2c3e50;">
+            Total Pembayaran: <span id="liveTotal" style="color: #478263; font-size: 18px;">Rp 480.000</span>
+        </div>
+
+        <input type="submit" value="Pesan Sekarang">
+    </form>
+    <hr>
+    <h3>Informasi Tambahan</h3>
+    <p>
+        Untuk mengecek lokasi agen resmi kami, Anda dapat mengunjungi
+        <a href="https://www.instagram.com/z_zzaarraa?igsh=ZjAyenhzdWZkYmR1&utm_source=qr" target="_blank">instagram
+            Agen Kami</a>.
+    </p>
+    <!-- Modal Tiket -->
+    <div id="ticketModal" class="modal-overlay">
+        <div class="ticket-card">
+            <h2>E-Tiket Gaskeun</h2>
+            <p>Terima kasih atas pemesanan Anda!</p>
+            <div class="ticket-details">
+                <p><strong>Nama:</strong> <span id="detailNama">-</span></p>
+                <p><strong>Rute:</strong> <span id="detailRute">-</span></p>
+                <p><strong>Jumlah Tiket:</strong> <span id="detailJumlah">-</span></p>
+                <p><strong>Total Bayar:</strong> <span id="detailTotal"
+                        style="color: #478263; font-weight: bold;">-</span></p>
+                <p><strong>Metode Pembayaran:</strong> <span id="detailPembayaran">-</span></p>
+                <p><strong>Status:</strong> <span style="color: #27ae60; font-weight: bold;">Lunas</span></p>
+            </div>
+            <div class="qr-container">
+                <img id="qrCode" src="" alt="QR Code Tiket" width="150" height="150">
+            </div>
+            <button class="btn-close" onclick="closeModal()">Tutup</button>
+        </div>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+        const ruteSelect = document.getElementById('rute');
+        const jumlahInput = document.getElementById('jumlah');
+        const liveTotalVal = document.getElementById('liveTotal');
+
+        function updateLiveTotal() {
+            const price = parseInt(ruteSelect.value) || 0;
+            const count = parseInt(jumlahInput.value) || 0;
+            const total = price * count;
+            liveTotalVal.innerText = 'Rp ' + total.toLocaleString('id-ID');
+        }
+
+        ruteSelect.addEventListener('change', updateLiveTotal);
+        jumlahInput.addEventListener('input', updateLiveTotal);
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const nama = document.getElementById('nama').value;
+            const jumlah = document.getElementById('jumlah').value;
+            const pembayaran = document.getElementById('pembayaran').value;
+
+            if (!nama || !jumlah) {
+                alert('Silakan lengkapi nama dan jumlah tiket.');
+                return;
+            }
+
+            const selectedOption = ruteSelect.options[ruteSelect.selectedIndex];
+            const routeName = selectedOption.getAttribute('data-route');
+            const price = parseInt(ruteSelect.value);
+            const count = parseInt(jumlah);
+            const total = price * count;
+            const formattedTotal = 'Rp ' + total.toLocaleString('id-ID');
+
+            // Set details
+            document.getElementById('detailNama').innerText = nama;
+            document.getElementById('detailRute').innerText = routeName;
+            document.getElementById('detailJumlah').innerText = count + ' Tiket';
+            document.getElementById('detailTotal').innerText = formattedTotal;
+            document.getElementById('detailPembayaran').innerText = pembayaran;
+
+            // Generate QR Code URL using QRServer API
+            const qrData = encodeURIComponent(`Nama: ${nama} | Rute: ${routeName} | Tiket: ${count} | Total: ${formattedTotal} | Bayar: ${pembayaran} | Status: Lunas`);
+            const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${qrData}`;
+            document.getElementById('qrCode').src = qrUrl;
+
+            // Open modal
+            document.getElementById('ticketModal').style.display = 'flex';
+        });
+
+        function closeModal() {
+            document.getElementById('ticketModal').style.display = 'none';
+            form.reset();
+            updateLiveTotal();
+        }
+    </script>
+</body>
+
+
+</html>
